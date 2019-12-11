@@ -17,9 +17,16 @@ nav {
 }
 
 u1 {
-  font-family: arial;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
   font-size: 32px;
   list-style: none;
+}
+
+@media(max-width: 800px){
+  u1 {
+    font-size: 18px;
+  }
 }
 
 u1 a {
@@ -30,8 +37,20 @@ u1 a {
   text-decoration: none;
 }
 
+@media(max-width: 800px){
+  u1 a {
+    -webkit-text-stroke-width: 0px;
+  }
+}
+
 u1 a:hover {
   font-size: 54px;
+}
+
+@media(max-width: 800px){
+  u1 a:hover {
+    font-size: 32px;
+  }
 }
 
 @media(max-width: 960px){
@@ -95,7 +114,7 @@ u1 a:hover {
 /* BOX FOR PORTRAIT POSITION */
 
 .portrait {
-  filter: blur(2.5px);
+  filter: blur(1px);
   background-image: url('jimmy-hwang.jpg');
   background-size: cover;
   background-position: center;
@@ -107,7 +126,7 @@ u1 a:hover {
 /* PICTURE SCALING BEFORE PUTTING IN PORTRAIT BOX AND MAKING WHITE BORDER AROUND PICTURE */
 
 .nameText {
-  filter: blur(1px);
+  filter: blur(0.5px);
   position: absolute;
   color: white;
   font-family: 'Great Vibes', cursive;
@@ -125,8 +144,15 @@ u1 a:hover {
   right: 3%;
   position: absolute;
   z-index: 4;
+
 }
 /* SOCIAL MEDIA BAR PLACEMENT */
+
+@media(max-width: 960px){
+  .socialBar {
+    left: 70%;
+  }
+}
 
 .facebookLogo {
   filter: invert(100%);
@@ -210,7 +236,7 @@ u1 a:hover {
 }
 
 .contentHeader {
-  font-family: arial;
+  font-family: 'Roboto Mono', monospace;
   font-size: 30px;
   color: white;
   display: flex;
@@ -218,20 +244,37 @@ u1 a:hover {
 }
 
 .aboutMeText {
-  font-family: arial;
+  font-family: 'Roboto Mono', monospace;
   font-size: 24px;
   color: white;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+@media(max-width: 1400px){
+  .aboutMeText {
+    padding-left: 37%;
+    padding-right: 37%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 22px;
+  }
+}
+
+@media(max-width: 960px){
+  .aboutMeText {
+    padding-left: 30%;
+    padding-right: 30%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 22px;
+  }
 }
 
 @media(max-width: 800px){
   .aboutMeText {
-    font-family: arial;
-    font-size: 18px;
-    color: white;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 25%;
+    padding-right: 25%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
   }
 }
 
@@ -243,19 +286,26 @@ u1 a:hover {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 2px;
+  padding: 0 4px;
 }
 
 .column {
-  flex: 24%;
-  max-width: 24%;
-  padding: 0 2px;
+  flex: 23%;
+  max-width: 23%;
+  padding: 0 4px;
 }
 
 .column img {
-  margin-top: 4px;
+  margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+}
+
+@media(max-width: 960px){
+  .column {
+    flex: 46%;
+    max-width: 46%;
+  }
 }
 
 .codingContainer {
@@ -263,25 +313,64 @@ u1 a:hover {
   justify-content: center;
 }
 
+@media(max-width: 960px){
+  .codingContainer {
+    margin-top: -100px;
+    -webkit-transform: scale(0.5);
+  }
+}
+
 .codingWebsiteLinks {
-  margin-top: 42px;
-  font-family: arial;
+  margin-top: 36px;
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
   font-size: 24px;
   display: flex;
   justify-content: center;
 }
 
+.codingWebsiteLinks:hover {
+  font-size: 32px;
+}
+
+@media(max-width: 960px){
+  .codingWebsiteLinks {
+    font-size: 16px;
+    margin-top: -50px;
+  }
+}
+
+@media(max-width: 960px){
+  .codingWebsiteLinks:hover {
+    font-size: 20px;
+  }
+}
+
 .musicProductionContainer {
-  margin-left: 11.5%;
-  margin-right: 11.5%;
+  padding-left: 11.5%;
+  padding-right: 11.5%;
   display: flex;
   justify-content: space-between;
 }
 
 .soundDesignContainer {
   margin-top: 48px;
-  margin-left: 11.5%;
-  margin-right: 11.5%;
+  padding-left: 11.5%;
+  padding-right: 11.5%;
   display: flex;
   justify-content: space-between;
+}
+
+@media(max-width: 960px){
+  .musicProductionContainer {
+    margin-top: -50px;
+    -webkit-transform: scale(0.6);
+  }
+}
+
+@media(max-width: 960px){
+  .soundDesignContainer {
+    margin-top: -100px;
+    -webkit-transform: scale(0.6);
+  }
 }
